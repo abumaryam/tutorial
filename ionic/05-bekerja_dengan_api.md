@@ -37,7 +37,8 @@ Pasangan name / value terdiri dari nama field (dalam tanda kutip ganda), diikuti
 pada contoh tersebut penulis adalah sebagai name dan Ibnul Qoyyim Al Jauziyah adalah sebagai value
 
 Tipe data pada JSON:
-
+- boolean
+- null
 - string
   contoh
   ```javascript
@@ -68,9 +69,7 @@ Tipe data pada JSON:
 
  ```
 
-boolean
 
-null
 
 
 
