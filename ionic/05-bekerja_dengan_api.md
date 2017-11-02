@@ -65,7 +65,9 @@ Tipe data pada JSON:
     ]
   }
  ```
+
 - boolean
+
 - null
 
 
