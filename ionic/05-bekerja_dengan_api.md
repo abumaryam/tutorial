@@ -6,7 +6,7 @@ sumber: https://www.webopedia.com/TERM/A/API.html
 
 ## Penerapan pada IONIC
 Pada kasus ini seumpamanya kita ingin menginstall pada ionic maka ada paket-paket angular yang harus dipersiapkan diantaranya (dan cara instalasinya):
-```bash
+```shell
 npm install @angular/common@latest --save
 npm install @angular/compiler@latest --save
 npm install @angular/compiler-cli@latest --save
