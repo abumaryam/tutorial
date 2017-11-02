@@ -69,10 +69,6 @@ Tipe data pada JSON:
 
  ```
 
-
-
-
-
 ## Penerapan pada IONIC
 Pada kasus ini seumpamanya kita ingin menginstall pada ionic maka ada paket-paket angular yang harus dipersiapkan diantaranya (dan cara instalasinya):
 ```shell
