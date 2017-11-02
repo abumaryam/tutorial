@@ -1,10 +1,10 @@
-#Bekerja dengan API
+# Bekerja dengan API
 
-##Pengertian API
+## Pengertian API
 An application program interface (API) is a set of routines, protocols, and tools for building software applications. Basically, an API specifies how software components should interact. Additionally, APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.
 sumber: https://www.webopedia.com/TERM/A/API.html
 
-##Penerapan pada IONIC
+## Penerapan pada IONIC
 Pada kasus ini seumpamanya kita ingin menginstall pada ionic maka ada paket-paket angular yang harus dipersiapkan diantaranya (dan cara instalasinya):
 ```unix
 npm install @angular/common@latest --save
@@ -92,7 +92,7 @@ getUsers() {
 
  
 
-##Menampilkan data pada view
+## Menampilkan data pada view
 Untuk menampikan data pada view, sebagai contoh kita menggunakan template blank maka bukalah file src/pages/home/home.ts dan ubahlah seperti tampak pada kode dibawah
 ```javascript
 import { RestProvider } from '../../providers/rest/rest';

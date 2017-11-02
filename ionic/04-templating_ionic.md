@@ -1,6 +1,6 @@
-#Templating Ionic
+# Templating Ionic
 
-##Pengembalian Template Tab
+## Pengembalian Template Tab
 Pada pertemuan sebelumnya kita telah memodifikasi template tab. Kali ini kita akan mencoba mengembalikan template tersebut dan akan dijadikan sebagai dasar dalam membangun aplikasi. Tahapannya adalah sebagai berikut.
 Backup hasil pembelajaran sebelumnya dengan menduplikasi (copas) folder /src/pages/tabs dan rename menjadi backuptab
 Buka file tabs.ts pada /src/pages/tabs dan isikanlah
@@ -34,7 +34,7 @@ Buka file tabs.html pada /src/pages/tabs dan isikanlah
  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>
 </ion-tabs>
 ```
-##Modifikasi Halaman
+## Modifikasi Halaman
 Contoh kasus kita adalah membuat aplikasi resep. Langkah-langkah membuatnya adalah
 
 Pada rancangan kita ada 4 halaman dasar. (1) Resep terbaru (2) Kategori Resep (3) Favorit (4) Tentang. Oleh Karena itu kita perlu memodifikasi nama-nama menu tab yang ada. Modifikasilah file src/pages/tabs/tabs.html menjadi
