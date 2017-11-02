@@ -118,6 +118,7 @@ constructor(public navCtrl: NavController, public restProvider: RestProvider) {
   }
 ```
 Lalu bukan dan ubahlah 'src/pages/home/home.html'
+```html
 <ion-content>
   <ion-list inset>
     <ion-item *ngFor="let user of users">
