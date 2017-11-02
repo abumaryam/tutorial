@@ -71,7 +71,7 @@ Tipe data pada JSON:
 
 ## Penerapan pada IONIC
 Pada kasus ini seumpamanya kita ingin menginstall pada ionic maka ada paket-paket angular yang harus dipersiapkan diantaranya (dan cara instalasinya):
-```shell
+```
 npm install @angular/common@latest --save
 npm install @angular/compiler@latest --save
 npm install @angular/compiler-cli@latest --save
