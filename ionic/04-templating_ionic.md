@@ -4,7 +4,7 @@
 Pada pertemuan sebelumnya kita telah memodifikasi template tab. Kali ini kita akan mencoba mengembalikan template tersebut dan akan dijadikan sebagai dasar dalam membangun aplikasi. Tahapannya adalah sebagai berikut.
 Backup hasil pembelajaran sebelumnya dengan menduplikasi (copas) folder /src/pages/tabs dan rename menjadi backuptab
 Buka file tabs.ts pada /src/pages/tabs dan isikanlah
-```
+```javascript
 import { Component } from '@angular/core';
 import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
@@ -27,7 +27,7 @@ export class TabsPage {
 
 
 Buka file tabs.html pada /src/pages/tabs dan isikanlah
-```
+```html
 <ion-tabs>
  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>
@@ -38,7 +38,7 @@ Buka file tabs.html pada /src/pages/tabs dan isikanlah
 Contoh kasus kita adalah membuat aplikasi resep. Langkah-langkah membuatnya adalah
 
 Pada rancangan kita ada 4 halaman dasar. (1) Resep terbaru (2) Kategori Resep (3) Favorit (4) Tentang. Oleh Karena itu kita perlu memodifikasi nama-nama menu tab yang ada. Modifikasilah file src/pages/tabs/tabs.html menjadi
-```
+```html
 <ion-tabs>
  <ion-tab [root]="tab1Root" tabTitle="Beranda" tabIcon="home"></ion-tab>
  <ion-tab [root]="tab2Root" tabTitle="Kategori" tabIcon="funnel"></ion-tab>
@@ -50,12 +50,12 @@ Catatan:
 pada attribut tabIcon terdapat nama-nama icon yang itu semuanya dapat dilihat pada alamat http://ionicons.com/
 
 Agar kita benar-benar membuat halaman yang baru, maka kita dapat membuat halaman baru dengan ionic cli. Caranya adalah dengan mengetikkan perintah berikut untuk membuat halaman baru dengan nama beranda:
-```
+```unix
 ionic generate page beranda
 ```
 Lakukan hal yang sama untuk halaman kategori, favorit, dan tentang
 Modifikasilah isi dari src/pages/beranda/beranda.html dengan mengubah isi dari elemen <ion-content> sehingga menjadi seperti di bawah ini
-```
+```html
 <ion-header>
   <ion-navbar>
     <ion-title>Beranda</ion-title>
@@ -70,7 +70,7 @@ Modifikasilah isi dari src/pages/beranda/beranda.html dengan mengubah isi dari e
 
 Lakukan hal yang sama untuk halaman kategori, favorit, dan tentang
 Masukkanlah halaman-halaman tersebut sebagai halaman tab dengan memodifikasi file src/pages/tabs/tabs.ts menjadi
-```
+```javascript
 import { Component } from '@angular/core';
 
 import { BerandaPage } from '../beranda/beranda';
@@ -96,7 +96,7 @@ export class TabsPage {
 ```
 
 Daftarkan halaman-halaman yang baru dibuat pada src/app/app.module.ts menjadi seperti berikut ini:
-```
+```javascript
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -148,7 +148,7 @@ export class AppModule {}
 Membuat Halaman Beranda
 Pada proses membuat halaman beranda perlu ditampilkan daftar 5 resep terbaru. Ini tentunya diambil dari data online yang ada di database online tersebut menggunakan REST API. Namun sebelum kita menggunakan REST maka pada pembahasan kali ini kita berfokus pada pembuatan templatenya terlebih dahulu. Kita akan menggunakan card yang terdapat gambar di dalamnya. Dokumentasi dari card ini dapat dilihat pada alamat https://ionicframework.com/docs/components/#card-image
 Untuk melakukan hal ini kita berfokus pada direktori src/pages/beranda. Modifikasilah halaman beranda.html sehingga menjadi 
-```
+```html
 <ion-header>
 
   <ion-navbar>
@@ -201,7 +201,7 @@ Jalankan perintah untuk membuat halaman baru
 ionic generate page detail
 
 Modifikasi halaman src/pages/detail/detail.html menjadi
-```
+```html
 <ion-header>
 
   <ion-navbar>
@@ -227,7 +227,7 @@ Modifikasi halaman src/pages/detail/detail.html menjadi
 ```
 
 Daftarkan page detail tadi pada src/app/app.module.ts sehingga berisi
-```
+```javascript
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -280,7 +280,7 @@ export class AppModule {}
 ```
 
 Selanjutnya adalah membuat aksi masuk ke halaman detail jika tombol selengkapnya diklik. Maka cukup kita tambahkan aksi (click) pada tombol selengkapnya yang ada di file filesrc/pages/beranda/beranda.html
-```
+```html
 <ion-header>
 
   <ion-navbar>
@@ -327,7 +327,7 @@ Selanjutnya adalah membuat aksi masuk ke halaman detail jika tombol selengkapnya
 ```
 
 Kemudian pada file src/pages/beranda/beranda.ts tambahkanlah fungsi lihatDetail pada class BerandaPage. Dan jangan lupa pula untuk menambahkan import { DetailPage } from '../detail/detail'; pada file ini sehingga kode selengkapnya adalah seperti berikut ini:
-```
+```javascript
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DetailPage } from '../detail/detail';
@@ -360,7 +360,7 @@ Halaman Kategori
 Halaman kategori adalah halaman yang memuat daftar dari kategori-kategori resep yang telah ada di database. Ketika kategori tersebut diklik maka akan muncul kumpulan resep yang mempunyai kategori yang dipilih tersebut. Untuk itu kita memerlukan komponen ionic yang disebut lists. Dokumentasi dari lists dapat dilihat pada alamat berikut https://ionicframework.com/docs/components/#lists
 
 Untuk membuatnya kita akan memodifikasi halaman kategori. Caranya adalah modifikasi terlebih dahulu file src/pages/kategori/kategori.ts dengan menambahkan variabel array dengan nama kumpulan kategori hingga hasil dari file tersebut menjadi seperti di bawah ini
-```
+```javascript
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -391,7 +391,7 @@ export class KategoriPage {
 ```
 Pada halaman src/pages/kategori/kategori.html modifikasilah file tersebut menjadi seperti di bawah ini dengan menambahkan list
 
-```
+```html
 <ion-header>
 
   <ion-navbar>
