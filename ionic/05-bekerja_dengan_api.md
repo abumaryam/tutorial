@@ -54,6 +54,7 @@ Tipe data pada JSON:
   }
   ```
 - array
+
   ```javascript
   {
     "nama":"Umar",
@@ -64,11 +65,12 @@ Tipe data pada JSON:
         { "namamk":"Pengelolaan Hubungan Pelanggan", "sks":3}
     ]
   }
+
  ```
 
-- boolean
+boolean
 
-- null
+null
 
 
 
