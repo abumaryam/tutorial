@@ -4,6 +4,72 @@
 An application program interface (API) is a set of routines, protocols, and tools for building software applications. Basically, an API specifies how software components should interact. Additionally, APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.
 sumber: https://www.webopedia.com/TERM/A/API.html
 
+## JSON
+JSON atau Javascript Object Notation adalah standar terbuka berbasis teks ringan yang dirancang untuk pertukaran data yang mudah dibaca manusia. Format JSON awalnya ditentukan oleh Douglas Crockford, dan dijelaskan di RFC 4627. Jenis media internet resmi untuk JSON adalah aplikasi / json. Ekstensi nama file JSON adalah .json. 
+
+### Contoh Sederhana Dari JSON
+Contoh berikut menunjukkan bagaimana menggunakan JSON untuk menyimpan informasi yang berkaitan dengan buku berdasarkan topik dan edisi nya:
+```javascript
+{
+   "book": [
+  
+      {
+         "id":"01",
+         "judul": "Sifat Sholat Nabi",
+         "edisi": "satu",
+         "penulis": "Nashiruddin Al Albani"
+      },
+  
+      {
+         "id":"02",
+         "judul": "Zadul Ma'ad",
+         "edisi": "satu",
+         "penulis": "Ibnul Qoyyim Al Jauziyah"
+      }
+   ]
+}
+```
+Data JSON ditulis sebagai pasangan name / value.
+Pasangan name / value terdiri dari nama field (dalam tanda kutip ganda), diikuti oleh titik dua, diikuti oleh sebuah nilai:
+```javascript
+"penulis": "Ibnul Qoyyim Al Jauziyah"
+```
+pada contoh tersebut penulis adalah sebagai name dan Ibnul Qoyyim Al Jauziyah adalah sebagai value
+
+Tipe data pada JSON:
+
+- string
+  contoh
+  ```javascript
+  { "penulis": "Ibnul Qoyyim Al Jauziyah" }
+  ```
+- number
+  ```javascript
+  { "ukuran":"41" }
+  ```
+- object (JSON object)
+  ```javascript
+  {
+    "mahasiswa":{ "nama":"Umar", "umur":17, "asal":"Pontianak" }
+  }
+  ```
+- array
+  ```javascript
+  {
+    "nama":"Umar",
+    "prodi":"sisfo",
+    "matakuliah": [
+        { "namamk":"Pemrograman Web", "sks":3},
+        { "namamk":"Algoritma dan Pemrograman", "sks":3},
+        { "namamk":"Pengelolaan Hubungan Pelanggan", "sks":3}
+    ]
+  }
+ ```
+- boolean
+- null
+
+
+
 ## Penerapan pada IONIC
 Pada kasus ini seumpamanya kita ingin menginstall pada ionic maka ada paket-paket angular yang harus dipersiapkan diantaranya (dan cara instalasinya):
 ```shell
@@ -90,7 +156,6 @@ getUsers() {
 }
 ```
 
- 
 
 ## Menampilkan data pada view
 Untuk menampikan data pada view, sebagai contoh kita menggunakan template blank maka bukalah file src/pages/home/home.ts dan ubahlah seperti tampak pada kode dibawah
@@ -128,4 +193,12 @@ Lalu bukan dan ubahlah 'src/pages/home/home.html'
   </ion-list>
 </ion-content>
 ```
-Now, you can see the data on the browser like this.
+Sekarang anda seharusnya sudah bisa melihat isi dari itu
+
+## Membuat API Sendiri dengan SLIM framework
+Slim FW merupakan salah satu framework mini yang biasa digunakan untuk membuat API
+dan seterusnya ...
+
+Untuk mudahnya download saja langsung dari sini:
+
+
