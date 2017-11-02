@@ -56,7 +56,7 @@ Tipe data pada JSON:
   ```
 - array
 
-  ```javascript
+  ```
   {
     "nama":"Umar",
     "prodi":"sisfo",
@@ -66,11 +66,11 @@ Tipe data pada JSON:
         { "namamk":"Pengelolaan Hubungan Pelanggan", "sks":3}
     ]
   }
-
  ```
 
 ## Penerapan pada IONIC
 Pada kasus ini seumpamanya kita ingin menginstall pada ionic maka ada paket-paket angular yang harus dipersiapkan diantaranya (dan cara instalasinya):
+
 ```
 npm install @angular/common@latest --save
 npm install @angular/compiler@latest --save
