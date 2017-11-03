@@ -129,7 +129,7 @@ ionic g provider Rest
 
 Perintah yang baru saja anda jalankan akan membuat sebuat file baru yaitu ‘rest.ts’ file dan folder baru bernama ‘rest’ di dalam folder ‘providers’ dan sekaligus mendaftarkannya secara otomatis pada ‘app.module.ts’. Sekarang bukalah ‘providers/rest/rest.ts’ lalu ubahlah ‘http’ import dengan Angular 4.3 HTTPClient yang baru.
 ```javascript
-import { HttpCl ient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 ```
 Jangan lupa untuk menggantinya jua pada contructor
 ```
