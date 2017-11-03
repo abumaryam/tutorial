@@ -46,7 +46,7 @@ Tipe data pada JSON:
   ```
 - number
   ```javascript
-  { "ukuran":"41" }
+  { "ukuran": 41 }
   ```
 - object (JSON object)
   ```javascript
