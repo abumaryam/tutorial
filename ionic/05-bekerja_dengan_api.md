@@ -69,17 +69,29 @@ Tipe data pada JSON:
  
 
 ## Penerapan pada IONIC
-Pada kasus ini seumpamanya kita ingin menginstall pada ionic maka ada paket-paket angular yang harus dipersiapkan diantaranya (dan cara instalasinya):
+Pada kasus ini seumpamanya kita ingin menginstall pada ionic maka ada paket-paket angular yang harus dipersiapkan. Buka package.json
+dan ubah pada bagian depedenciesnya seperti di bawah ini:
 
 ```
-npm install @angular/common@latest --save
-npm install @angular/compiler@latest --save
-npm install @angular/compiler-cli@latest --save
-npm install @angular/core@latest --save
-npm install @angular/forms@latest --save
-npm install @angular/http@latest --save
-npm install @angular/platform-browser@latest --save
-npm install @angular/platform-browser-dynamic@latest --save
+"dependencies": {
+    "@angular/common": "4.4.4",
+    "@angular/compiler": "4.4.4",
+    "@angular/compiler-cli": "4.4.4",
+    "@angular/core": "4.4.4",
+    "@angular/forms": "4.4.4",
+    "@angular/http": "4.4.4",
+    "@angular/platform-browser": "4.4.4",
+    "@angular/platform-browser-dynamic": "4.4.4",
+    "@ionic-native/core": "4.3.2",
+    "@ionic-native/splash-screen": "4.3.2",
+    "@ionic-native/status-bar": "4.3.2",
+    "@ionic/storage": "2.0.1",
+    "ionic-angular": "3.8.0",
+    "ionicons": "3.0.0",
+    "rxjs": "5.4.3",
+    "sw-toolbox": "3.6.0",
+    "zone.js": "0.8.18"
+  },
 ```
 
 
