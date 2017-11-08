@@ -120,15 +120,16 @@ apiUrl = 'https://jsonplaceholder.typicode.com';
 ```
 Lalu tambahkan fungsi berikut setelah constuctor
 ```
-getUsers() {
-  return new Promise(resolve =>; {
-    this.http.get(this.apiUrl+'/users').subscribe(data =>; {
-      resolve(data);
-    }, err =>; {
-      console.log(err);
-    });
-  });
-}
+  getUsers() {
+      return new Promise(resolve => {
+        this.http.get(this.apiUrl+'/users').subscribe(data => {
+          resolve(data);
+        }, err => {
+          console.log(err);
+        });
+      });
+  }
+
 ```
 
 
