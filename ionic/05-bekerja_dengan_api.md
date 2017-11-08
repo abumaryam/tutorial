@@ -153,8 +153,9 @@ Untuk menampikan data pada view, sebagai contoh kita menggunakan template blank 
 ```javascript
 import { RestProvider } from '../../providers/rest/rest';
 Inject the `RestProvider` to the constructor.
-constructor(public navCtrl: NavController, public restProvider: RestProvider) {}
-
+constructor(public navCtrl: NavController, public restProvider: RestProvider) {
+    this.getUsers();
+  }
 users: any;
 //Buat fungsi seperti di bawah untuk mengambil dari provider yang sudah kita buat tadi
 
@@ -167,12 +168,6 @@ getUsers() {
   }
 ```
 
-Lalu jalankanlah fungsi yang ada di provider di constructor yang ada di file home.ts tadi
-```javascript
-constructor(public navCtrl: NavController, public restProvider: RestProvider) {
-    this.getUsers();
-  }
-```
 Lalu bukan dan ubahlah 'src/pages/home/home.html'
 ```html
 <ion-content>
@@ -187,9 +182,10 @@ Lalu bukan dan ubahlah 'src/pages/home/home.html'
 Sekarang anda seharusnya sudah bisa melihat isi dari itu
 
 ## Membuat API Sendiri dengan SLIM framework
-Slim FW merupakan salah satu framework mini yang biasa digunakan untuk membuat API
-dan seterusnya ...
+Slim FW merupakan salah satu framework mini yang biasa digunakan untuk membuat API. 
 
 Untuk mudahnya download saja langsung dari sini:
+https://github.com/abumaryam/apiresep
+
 
 
