@@ -93,7 +93,10 @@ dan ubah pada bagian depedenciesnya seperti di bawah ini:
     "zone.js": "0.8.18"
   },
 ```
-
+Lalu jalankan perintah berikut pada terminal
+```
+npm update
+```
 
 selanjutnya buka file ‘src/app/app.module.ts’ dan tambahkan baris ini pada kumpulan baris import yang umumnya ada di barisan paling atas
 ```unix
